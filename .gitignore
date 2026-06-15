@@ -1,0 +1,9 @@
+# Datasets / generated data
+/data/
+# Trained checkpoints and visualizations
+/models/
+/vis/
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
