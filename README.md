@@ -52,3 +52,16 @@ python main.py --action=train --dataset=lara --epoch=30
 # eval (Hungarian MoF / Edit / F1@{10,25,50})
 python main.py --action=eval --dataset=lara --ckpt models/lara/epoch-30.model --epoch 30
 ```
+
+### One-click full pipeline
+
+Download the full LARa v3 (OMoCap) CSVs from
+https://zenodo.org/records/8189341, then:
+
+```bash
+bash run_lara.sh /path/to/raw_lara 30     # preprocess -> train -> eval
+```
+
+GPU is used automatically if available (recommended). Use the **full** LARa set
+(not a few sequences) to approach the paper's MoF ~45.9; too few sequences cause
+codebook collapse.
